@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog</title>
+    <style>
+        /* minimal CSS to make it look decent */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .course {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .course h2 {
+            margin-top: 0;
+        }
+        .course p {
+            margin-bottom: 10px;
+        }
+        .enroll-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .enroll-btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ragu's Aesthetic WebDevelopment Courses</h1>
+    <h1>Course Catalog</h1>
+    <div class="course">
+        <h2>Course 1: Introduction to HTML/CSS</h2>
+        <p>This course covers the basics of HTML and CSS.</p>
+        <button class="enroll-btn" data-course-id="1">Enroll</button>
+    </div>
+    <div class="course">
+        <h2>Course 2: JavaScript Fundamentals</h2>
+        <p>This course covers the basics of JavaScript.</p>
+        <button class="enroll-btn" data-course-id="2">Enroll</button>
+    </div>
+    <div class="course">
+        <h2>Course 3: ReactJS Essentials</h2>
+        <p>This course covers the basics of ReactJS.</p>
+        <button class="enroll-btn" data-course-id="3">Enroll</button>
+    </div>
+
+    <!--... (rest of the code remains the same) -->
+
+<script>
+    // add event listener to enroll buttons
+    document.querySelectorAll('.enroll-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const courseId = btn.getAttribute('data-course-id');
+            // redirect to enrollment page with course ID
+            window.location.href = `enrollment.html?courseId=${courseId}`;
+        });
+    });
+</script>
+</body>
+</html>

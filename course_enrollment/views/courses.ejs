@@ -1,0 +1,13 @@
+<h1>Course Catalog</h1>
+<ul>
+  <% courses.forEach(course => { %>
+    <li>
+      <%= course.title %> - <%= course.description %> - <%= course.duration %> hours - <%= course.fee %> $
+      <form action="/enroll" method="post">
+        <input type="hidden" name="courseId" value="<%= course._id %>">
+        <input type="hidden" name="userId" value="user123"> <!-- Replace with actual user ID -->
+        <button type="submit">Enroll</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>
