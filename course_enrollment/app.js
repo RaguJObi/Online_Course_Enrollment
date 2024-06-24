@@ -9,7 +9,7 @@ app.use(express.static('public'));
 const courses = [
   { id: 1, title: 'Introduction to HTML/CSS', description: 'This course covers the basics of HTML and CSS.' },
   { id: 2, title: 'JavaScript Fundamentals', description: 'This course covers the basics of JavaScript.' },
-  { id: 3, title: 'ReactJS Essentials', description: 'This course covers the basics of ReactJS.' },
+  { id: 3, title: 'React Essentials', description: 'This course covers the basics of ReactJS.' },
 ];
 
 // Handle GET request for course catalog
